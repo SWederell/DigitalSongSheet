@@ -4,9 +4,10 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import ShareIcon from "@mui/icons-material/Share";
 import WestIcon from "@mui/icons-material/West";
 import { Box, Button } from "@mui/material";
-import data from "../data-files/easter2025";
+import { ServiceData } from "../types";
 
 const NavBar = ({
+	data,
 	prevItem,
 	nextItem,
 	currentIdx,
@@ -14,6 +15,7 @@ const NavBar = ({
 	toggleShareOpen,
 	toggleSettingsOpen,
 }: {
+	data: ServiceData;
 	prevItem: () => void;
 	nextItem: () => void;
 	currentIdx: number;

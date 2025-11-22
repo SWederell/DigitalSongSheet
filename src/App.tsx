@@ -1,4 +1,3 @@
-import ScreenRotationIcon from "@mui/icons-material/ScreenRotation";
 import TextDecreaseIcon from "@mui/icons-material/TextDecrease";
 import TextIncreaseIcon from "@mui/icons-material/TextIncrease";
 import {
@@ -13,12 +12,11 @@ import {
 	ListItemText,
 	ToggleButton,
 	ToggleButtonGroup,
-	Typography,
 	useMediaQuery,
 } from "@mui/material";
 import { useState } from "react";
 
-import data from "./data-files/easter2025";
+import data from "./data-files/placeholder";
 import "./App.css";
 
 import QR from "./assets/QR.png";
@@ -174,34 +172,33 @@ function App() {
 				alignItems: landscape ? "start" : "center",
 			}}
 		>
-			{landscape ? (
-				<Box
-					sx={{
-						display: "flex",
-						flexDirection: "column",
-						alignItems: "center",
-						width: "90vw",
-						height: "100%",
-					}}
-				>
-					<Box sx={{ flexGrow: 1 }}>{genScreen()}</Box>
-					<NavBar
-						toggleSettingsOpen={toggleSettingsOpen}
-						toggleShareOpen={toggleShareOpen}
-						toggleSkipOpen={toggleSkipOpen}
-						prevItem={prevItem}
-						nextItem={nextItem}
-						currentIdx={currentIdx}
-					/>
-				</Box>
-			) : (
-				<Container>
-					<Typography>
-						This site is designed for landscape mode, please turn your device.
-					</Typography>
-					<ScreenRotationIcon fontSize="large" sx={{ marginTop: "10px" }} />
-				</Container>
-			)}
+			<Box
+				sx={{
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					width: "90vw",
+					height: "100%",
+				}}
+			>
+				<Box sx={{ flexGrow: 1 }}>{genScreen()}</Box>
+				<NavBar
+					data={data}
+					toggleSettingsOpen={toggleSettingsOpen}
+					toggleShareOpen={toggleShareOpen}
+					toggleSkipOpen={toggleSkipOpen}
+					prevItem={prevItem}
+					nextItem={nextItem}
+					currentIdx={currentIdx}
+				/>
+			</Box>
+
+			{/* <Container>
+				<Typography>
+					This site is designed for landscape mode, please turn your device.
+				</Typography>
+				<ScreenRotationIcon fontSize="large" sx={{ marginTop: "10px" }} />
+			</Container> */}
 			<Drawer anchor="bottom" open={skipOpen} onClose={toggleSkipOpen}>
 				{genSkipList()}
 			</Drawer>

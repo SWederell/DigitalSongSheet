@@ -7,8 +7,8 @@ const data: ServiceData = {
 	order: [
 		{
 			type: "title",
-			title: "Placeholder",
-			subtitle: "This will be updated the day before the service",
+			title: "Open Air Nativity 2025",
+			subtitle: "This page will be updated the day before the service",
 			showOrder: "",
 			id: "",
 		},
