@@ -96,6 +96,35 @@ const data: ServiceData = {
 			copyright: "Public Domain",
 			ccli: false,
 		},
+		AwayInAManger: {
+			title: "Away in a Manger",
+			B: [],
+			C: [],
+			E: [],
+			V: [
+				[
+					"Away in a manger, no crib for a bed",
+					"The little Lord Jesus lay down His sweet head.",
+					"The stars in the bright sky looked down where He lay,",
+					"The little Lord Jesus, asleep on the hay.",
+				],
+				[
+					"The cattle are lowing, the Baby awakes,",
+					"But little Lord Jesus, no crying He makes;",
+					"I love Thee, Lord Jesus, look down from the sky",
+					"And stay by my side until morning is nigh.",
+				],
+				[
+					"Be near me, Lord Jesus, I ask Thee to stay",
+					"Close by me forever, and love me, I pray;",
+					"Bless all the dear children in Thy tender care,",
+					"And take us to Heaven to live with Thee there.",
+				],
+			],
+			order: "v1 v2 v3",
+			copyright: "Public Domain",
+			ccli: false,
+		},
 		LittleDonkey: {
 			title: "Little Donkey",
 			B: [
@@ -514,6 +543,13 @@ const data: ServiceData = {
 			subtitle: "sing 'Away in a Manger'\nPlease join in with verse 3",
 			showOrder: "",
 			id: "",
+		},
+		{
+			type: "song",
+			id: "AwayInAManger",
+			showOrder: "",
+			title: "",
+			subtitle: "",
 		},
 		{
 			type: "reading",
