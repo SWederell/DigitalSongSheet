@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-import data from "./data-files/oan2025NIV";
+import data from "./data-files/easter2026.ts";
 import "./App.css";
 
 import QR from "./assets/QR.png";
